@@ -22,14 +22,19 @@
     .font-poppins {
       font-family: 'Poppins', sans-serif;
     }
+    @media screen and (max-width:425px) {
+       .menu-horizontal {
+        flex-direction: column;
+       }
+    }
   </style>
 </head>
 
 <body>
   <header>
     <!-- navbar started -->
-    <div class="navbar flex-col lg:flex-row justify-around bg-base-100">
-      <div class=" ">
+    <div class="navbar flex-col lg:flex-row justify-around bg-base-100 pt-10">
+      <div>
         <img class="" src="./images/logo.png" alt="">
         <h1 class="text-3xl font-extrabold font-ebgaramond -ml-24">Justice</h1>
       </div>
@@ -46,7 +51,7 @@
     </div>
     <!-- banner started -->
 
-    <section class="max-w-sm lg:max-w-6xl mx-auto mt-10 ">
+    <section class="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto mt-10 md:p-5">
       <div class="hero h-[500px] rounded-lg" style="background-image: url(./images/banner.png);">
         <div class="hero-overlay bg-opacity-40 rounded-lg"></div>
         <div class="hero-content text-center text-neutral-content">
@@ -164,7 +169,7 @@
         <div id="slide1" class="carousel-item relative w-full">
           <div class="absolute opacity-80 "> <img class="h-[500px] lg:h-full" src="./images/Rectangle7.png" alt=""></div>
 
-          <div class="max-w-lg absolute top-40 md:left-80 text-white">
+          <div class="max-w-lg absolute top-40  md:left-24  lg:left-80 text-white">
             <div class="flex justify-center mb-4">
               <img src="./images/client.png" alt="">
             </div>
@@ -183,7 +188,7 @@
         <div id="slide2" class="carousel-item relative w-full">
           <div class="absolute opacity-90"> <img class="h-[500px] lg:h-full" src="./images/Rectangle7.png" alt=""></div>
 
-          <div class="max-w-lg absolute top-40 md:left-80 text-white">
+          <div class="max-w-lg absolute top-40 md:left-24  lg:left-80  text-white">
             <div class="flex justify-center mb-4">
               <img src="./images/client.png" alt="">
             </div>
@@ -202,7 +207,7 @@
         <div id="slide3" class="carousel-item relative w-full">
           <div class="absolute opacity-90"> <img class="h-[500px] lg:h-full" src="./images/Rectangle7.png" alt=""></div>
 
-          <div class="max-w-lg absolute top-40 md:left-80 text-white">
+          <div class="max-w-lg absolute top-40 md:left-24  lg:left-80  text-white">
             <div class="flex justify-center mb-4">
               <img src="./images/client.png" alt="">
             </div>
@@ -297,8 +302,8 @@
       <p class="font-poppins mt-5">There are many variations of passages of Lorem Ipsum available, but the majority have
         <br>suffered alteration in some form, by injected humour.</p>
 
-     <div class="flex flex-col lg:flex-row mt-10 ">
-      <div class="grid grid-cols-1 lg:grid-cols-2 flex-1">
+     <div class="flex flex-col lg:flex-row mt-10 lg:space-y-0 md:space-y-5 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex-1">
         <div class="card  bg-[#F3F3F3] px-3 lg:px-7 py-4  lg:py-6 border-b-2 border-r-2 rounded-none">
           <figure><img src="./images/location.png" alt="Shoes" /></figure>
           <div class="card-body ">
@@ -340,9 +345,9 @@
 
         <input type="text" placeholder="Subject" class="input input-bordered w-full max-w-md rounded-md border-none p-7 bg-[#F3F3F3] text-[#707070]" />
 
-        <textarea class="lg:w-[450px] w-[380px] textarea textarea-bordered border-none  p-6 bg-[#F3F3F3] h-40" placeholder="Your Message"></textarea>
+        <textarea class="input w-full max-w-md textarea-bordered border-none  p-6 bg-[#F3F3F3] h-40" placeholder="Your Message"></textarea>
 
-        <button class="btn hover:bg-[#B68C5A] bg-[#B68C5A] border-none text-white lg:w-[450px] w-[380px]">Send Message</button>
+        <button class="btn hover:bg-[#B68C5A] bg-[#B68C5A] border-none text-white w-full max-w-md">Send Message</button>
 
       </form>
      </div>
@@ -350,8 +355,40 @@
     </section>
 
   </main>
-  <footer>
-
+  <footer class="footer p-10 md:space-x-10 lg:p-20 bg-black text-base-content">
+    <div>
+      <img src="./images/logo2.png" alt="">
+      <p class="max-w-xs  text-[#CFCFCF] mt-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    </div> 
+    <div class="text-[#CFCFCF]">
+      <span class="text-xl font-extrabold font-ebgaramond text-white">Usefull Link</span> 
+      <a class="link link-hover">Homes</a> 
+      <a class="link link-hover">About Us</a> 
+      <a class="link link-hover">Cases</a> 
+      <a class="link link-hover">Blog</a>
+      <a class="link link-hover">Contact Us</a>
+    </div> 
+    <div class="text-[#CFCFCF]">
+      <span class="text-xl font-extrabold font-ebgaramond text-white">Contact Now </span> 
+      <p class="link link-hover">555 4th 5t NW, Washington <br>
+        DC 20530, United States</p> 
+      <p class="link link-hover">+88 01750 000 000 <br>
+        +88 01750 000 000</p> 
+      <p class="link link-hover">info@gmail.com <br>
+        info@gmail.com</p>
+    </div> 
+    <div>
+      <span class="text-xl font-extrabold font-ebgaramond text-white">Subscribe</span> 
+      <div class="form-control w-80">
+        
+          <p class="text-[#CFCFCF] my-5">Subscribe for our latest & <br>Articles. We Won’t Give You <br> Spam Mails</p>
+        
+        <div class="relative">
+          <input type="text" placeholder="Email Address" class="input input-bordered " /> 
+          <button class="btn hover:bg-[#B68C5A] bg-[#B68C5A] absolute top-0 right-20 rounded-l-none text-3xl"> <i class="fa-solid fa-square-up-right"></i> </button>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 
